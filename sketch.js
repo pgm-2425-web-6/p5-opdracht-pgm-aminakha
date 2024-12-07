@@ -47,19 +47,19 @@ let playerShurikens = []; // Array to store player-shooting shurikens
 
 function preload() {
   // Load multiple backgrounds into the array
-  backgroundSprites.push(loadImage("sprites/background.gif"));
-  backgroundSprites.push(loadImage("sprites/background-2.gif"));
-  backgroundSprites.push(loadImage("sprites/background-3.gif"));
-  backgroundSprites.push(loadImage("sprites/background-4.gif"));
-  bossBackgroundSprite = loadImage("sprites/bossroom.png");
-  characterSprite = loadImage("sprites/ninjaIdle.gif");
-  characterRunningSprite = loadImage("sprites/ninjaRunning.gif");
-  platform = loadImage("sprites/platformSprite.jpg");
-  coinSprite = loadImage("sprites/coin.gif");
-  bossSprite = loadImage("sprites/boss.gif"); // Boss idle sprite
-  bossSprintSprite = loadImage("sprites/bossRunning.gif"); // Boss running sprite
-  bossAttackSprite = loadImage("sprites/bossAttack.gif"); // Boss attack sprite
-  shurikenSprite = loadImage("sprites/shuriken.png");
+  backgroundSprites.push(loadImage("./sprites/background.gif"));
+  backgroundSprites.push(loadImage("./sprites/background-2.gif"));
+  backgroundSprites.push(loadImage("./sprites/background-3.gif"));
+  backgroundSprites.push(loadImage("./sprites/background-4.gif"));
+  bossBackgroundSprite = loadImage("./sprites/bossroom.png");
+  characterSprite = loadImage("./sprites/ninjaIdle.gif");
+  characterRunningSprite = loadImage("./sprites/ninjaRunning.gif");
+  platform = loadImage("./sprites/platformSprite.jpg");
+  coinSprite = loadImage("./sprites/coin.gif");
+  bossSprite = loadImage("./sprites/boss.gif"); // Boss idle sprite
+  bossSprintSprite = loadImage("./sprites/bossRunning.gif"); // Boss running sprite
+  bossAttackSprite = loadImage("./sprites/bossAttack.gif"); // Boss attack sprite
+  shurikenSprite = loadImage("./sprites/shuriken.png");
 
   coinSound = loadSound("sounds/coinsound.mp3");
   jumpSound = loadSound("sounds/jump.mp3");
