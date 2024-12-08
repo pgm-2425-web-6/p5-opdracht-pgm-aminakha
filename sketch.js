@@ -8,7 +8,7 @@ let bossSprintSprite;
 let platform;
 let bossAttackSprite;
 let shurikenSprite;
-
+let pixelFont;
 let coinSound;
 let jumpSound;
 let victorySound;
@@ -60,7 +60,7 @@ function preload() {
   bossSprintSprite = loadImage("./sprites/bossRunning.gif"); // Boss running sprite
   bossAttackSprite = loadImage("./sprites/bossAttack.gif"); // Boss attack sprite
   shurikenSprite = loadImage("./sprites/shuriken.png");
-
+  pixelFont = loadFont("./fonts/PixelifySans-Regular.woff");
   coinSound = loadSound("sounds/coinsound.mp3");
   jumpSound = loadSound("sounds/jump.mp3");
   victorySound = loadSound("sounds/victorysound.mp3");
@@ -80,7 +80,6 @@ function setup() {
   // Set a random background for the first level
   currentBackground = backgroundSprites[floor(random(backgroundSprites.length))];
 }
-
 
 function draw() {
   // Draw the current background
@@ -267,9 +266,9 @@ function handleBossBattle() {
     }
   }
 
-  if (bossHealth <= 0) {
+  if (bossHealth < 0) {
     victorySound.play();
-    textSize(70);
+    textSize(20);
     textAlign(CENTER, CENTER);
     fill(255, 200, 0);
     text("You Defeated the Boss!", width / 2, height / 2);
@@ -299,6 +298,7 @@ function keyPressed() {
   }
 
   if (keyCode === 32) {
+    event.preventDefault();
     // Shoot a shuriken
     let shurikenSpeed = facingRight ? 10 : -10;
     playerShurikens.push({
@@ -310,21 +310,24 @@ function keyPressed() {
 }
 
 function displayScore() {
-  fill(255);
+  fill(0);
   textSize(16);
-  text("Score: " + score, 10, 20);
+  textFont(pixelFont);  // Use the Pixelify Sans font
+  textAlign(LEFT, TOP);
+  text("Score: " + score, 10, 10);
 }
 
 function checkWin() {
   if (coins.length === 0 && lvlCounter !== 3) {
     textAlign(CENTER, CENTER);
     textSize(40);
-    fill(255, 200, 0);
+    fill(255);
     text("Level Complete!", width / 2, height / 2);
 
     if (!nextLevelButton) {
       nextLevelButton = createButton("Next Level");
-      nextLevelButton.position(width / 2 - 50, height / 2 + 50);
+      nextLevelButton.parent("canvas-container");
+      nextLevelButton.class("next-level-button");
       nextLevelButton.mousePressed(nextLevel);
     }
   }
