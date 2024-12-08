@@ -67,7 +67,12 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 400);
+  // Create the canvas
+  let canvas = createCanvas(600, 400);
+
+  // Attach the canvas to the div with ID 'canvas-container'
+  canvas.parent('canvas-container');
+
   characterY = height - 145; // Set character's Y position
   platformY = height - platformHeight; // Set platform's Y position
   drawCoins(); // Populate the coins array
@@ -75,6 +80,7 @@ function setup() {
   // Set a random background for the first level
   currentBackground = backgroundSprites[floor(random(backgroundSprites.length))];
 }
+
 
 function draw() {
   // Draw the current background

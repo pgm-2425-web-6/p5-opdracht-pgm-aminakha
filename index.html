@@ -8,12 +8,61 @@
     <title>The Silent Ninja</title>
   </head>
   <body>
-    <h1>Game</h1>
-    <main>
-        <div class="canvas-container">
+    <section class="main-container">
+       <header>
+      <nav>
+        <h1>The Silent Ninja</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#controls">Controls</a></li>
+          <li class="story"><a  href="#about">Story</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="home-container">
+       
+        <div id="canvas-container" class="canvas-holder">
           
         </div>
+
+        <div id="controls" class="controls-container">
+          <h2>Controls</h2>
+          <p class="controls-description">Use the arrow keys to move the ninja around the screen. The ninja will automatically attack the enemies when they are in range. The ninja will also automatically collect the coins when they are in range. The game will end when the ninja's health reaches zero.</p>
+          <ul class="arrow-list">
+            <li>
+              <h3>Up Arrow</h3>
+              <p>Move the ninja up</p>
+              <figure><img src="./img/arrow-up.png" alt="Arrow Up"></figure>
+            </li>
+           
+            <li>
+              <h3>Left Arrow</h3>
+              <p>Move the ninja left</p>
+              <figure><img src="./img/arrow-left.png" alt="Arrow Left"></figure>
+            </li>
+            <li>
+              <h3>Right Arrow</h3>
+              <p>Move the ninja right</p>
+              <figure><img src="./img/arrow-right.png" alt="Arrow Right"></figure>
+            </li>
+          </ul>
+        </div>
+
+        <div id="story" class="story-container">
+          <h2 id="about">Story</h2>
+         <h2>The Silent Ninja</h2>
+         <p>Riku, a legendary ninja known only as “The Silent,” embarked on a dangerous quest to collect enchanted coins scattered across mysterious, ever-changing lands. Each map he encountered was unique, filled with traps, enemies, and hidden treasures. Success required his unmatched agility and quiet precision.</p>
+        <h3>The Random Realms</h3>
+        <p>Riku never knew where his journey would take him. One moment he was navigating a bamboo maze filled with mechanical guardians, the next scaling crumbling ruins teetering on a cliff's edge. Each map challenged his skills in different ways—stealth, speed, and cunning were his only allies. Every coin he collected pulsed with power, pulling him closer to his ultimate goal.</p>
+      <h3>The Third Level: The Boss Awaits</h3>
+        <p>On the third map, a greater challenge always emerged. This time, it was a fiery arena surrounded by molten lava. Awaiting him was Lord Kaijiro, a towering rogue ninja wielding a sword of blue flames. Without a word, Riku engaged. Kaijiro unleashed devastating attacks and summoned shadowy clones, but Riku’s mastery of stealth and strategy turned the tide. Using the magic of the coins he had collected, Riku struck at Kaijiro’s weak point, shattering his defenses.</p>  
+      <h3>The Journey Continues</h3>
+      <p>With Kaijiro defeated, Riku claimed the final coin. The coins fused into a glowing medallion, opening the path to an even greater challenge. Without hesitation, the Silent Ninja disappeared into the shadows, ready to face whatever lay ahead.</p>
+    <p>For Riku, the maps were always random, but his purpose remained constant: to master the chaos and protect the balance of the realms.</p>  
+    </div>
     </main>
+    </section>
+   
     <script src="sketch.js"></script>
   </body>
 </html>

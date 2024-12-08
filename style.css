@@ -1,7 +1,190 @@
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('./fonts/PixelifySans-Medium.woff2') format('woff2'),
+      url('./fonts/PixelifySans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('./fonts/PixelifySans-Bold.woff2') format('woff2'),
+      url('./fonts/PixelifySans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('./fonts/PixelifySans-Regular.woff2') format('woff2'),
+      url('./fonts/PixelifySans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('./fonts/PixelifySans-SemiBold.woff2') format('woff2'),
+      url('./fonts/PixelifySans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+:root {
+  --max-width: 90rem;
+  --center: 0 auto;
+--light-color: white;
+--dark-color: black;
+}
+
 html, body {
+  scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    
   }
   canvas {
     display: block;
+  }
+
+  body {
+    background: rgb(2,0,36);
+background: linear-gradient(177deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgba(0,212,255,1) 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: 'Roboto', sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+  }
+  a {
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .main-container  {
+    color : white;
+    font-family: 'Pixelify Sans', sans-serif;
+    & header {
+      
+     
+      background-color: var(--light-color);
+      & nav {
+         margin: var(--center);
+         width: 100%;
+      max-width: var(--max-width);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--dark-color);
+        & ul {
+          display: flex;
+          align-items: center;
+          gap: 1rem;  
+          & li { 
+            
+          
+             &.story {
+              border: 1px solid var(--dark-color);
+              padding: .5rem;
+              transition: all .3s ease;
+              &:hover {
+                background-color: #06054f;
+                transition: all .3s ease;
+              }
+              & a {
+                padding: .5rem;
+                transition: all .3s ease;
+                &:hover {
+                  color: var(--light-color);
+                  transition: all .3s ease;
+                }
+              }
+             }
+            & a {
+              color: var(--dark-color);
+              padding:.2rem;
+              transition: all .1s ease;
+            &:hover {
+              border-bottom: 2px solid var(--dark-color);
+              transition: all .1s ease;
+            }
+            }
+          }
+        }
+      }
+    }
+
+    & .home-container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: var(--center);
+      & .canvas-holder {
+        display: flex;
+        margin-top: 2rem; 
+        justify-content: center;
+     & canvas{
+      border-radius: 10px;
+      border: 3px solid var(--light-color);
+      transition: all .3s ease;
+      &:hover {
+      
+        transition: all .3s ease;
+        transform: translateY(-5px);
+      }
+     }
+      }
+      & .controls-container {
+        & .description {
+          width:5rem;
+        }
+      }
+      & .arrow-list{
+        display: flex;
+        gap: 1rem;
+        border-radius: .625rem;
+        padding: 1rem;
+        border: .25rem solid var(--dark-color);
+        width: 30rem;
+        margin: 0 auto;
+        
+        & li {
+          position: relative; 
+          padding-bottom: 3rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & h3 {
+            margin: 0;
+            padding: 0;
+          }
+          & p {
+            padding:0;
+            margin: 0;
+          }
+          & figure {
+            & img {
+              width:10rem;
+            position:absolute;
+            top: 12px;
+                        left: 0;
+            }
+          }
+        }
+      }
+    }
   }
