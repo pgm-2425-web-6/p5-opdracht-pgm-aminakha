@@ -1,3 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/22-pQvBd)
+
 
 # P5 opdracht
+
+Dit is een side-scroller game waarin je een ninja bestuurt om munten te verzamelen en zo naar het volgende level te gaan. Zodra je level 3 hebt bereikt, kun je het opnemen tegen de baas
